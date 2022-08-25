@@ -1,0 +1,20 @@
+{
+  "name": "Fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgq10/JavaScript-Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidgq10/JavaScript-Practice/issues"
+  },
+  "homepage": "https://github.com/davidgq10/JavaScript-Practice#readme"
+}

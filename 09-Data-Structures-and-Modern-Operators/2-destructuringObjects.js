@@ -42,8 +42,27 @@ const restaurant = {
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  //In this method we can have a function that received an object and destructuring those object when recieved the method.
+  orderDelivery({ starterIndex, mainIndex, time, address }) {
+    console.log(
+      `⏺ Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
 
+/////////////////////////HERE ARE THE KNOWLEGE////////////////////////////
+
+//Call orderDelivery method in the restaurant object.
+restaurant.orderDelivery({
+  starterIndex: 2,
+  mainIndex: 2,
+  time: '22:30',
+  address:
+    'San José, Desamparados, Frailes, Bustamante Abajo, 500 m norte de la terminal de buses a San José',
+});
+
+//Call order method in the restaurant object and saved the result in order variable.
 const order = restaurant.order(2, 3);
 console.log(order);
 
@@ -60,7 +79,6 @@ const {
 console.log('🔶', Menu, Name, Hours);
 
 //We can to define default values if the object doesn't have one propertie with the name the we use.
-
 const {
   // Because the restaurant object doesn't have a propertie named restaurantMenu, the default value is going to return an empty array; IF WE DOESN'T DEFINE A DEFAULT VALUE WILL RETURN "undefined"
   restaurantMenu = [],
@@ -71,5 +89,4 @@ const {
     'Second default category',
   ],
 } = restaurant;
-
 console.log('💚', restaurantMenu, myRestName, myRestCategories);
