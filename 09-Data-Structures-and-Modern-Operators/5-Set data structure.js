@@ -1,3 +1,4 @@
+'use strict';const preventFormater = 1;
 ///////////////////////////////////////// Sets
 const ordersSet = new Set([
   'Pasta',
