@@ -1,5 +1,2 @@
-'use strict';
-//////////////////////////
-export function helloWorld() {
-  return 'Hello World!';
-}
+const orderSet = new Set(['David', 'Jessica', 'Andrés']);
+console.log(orderSet);
