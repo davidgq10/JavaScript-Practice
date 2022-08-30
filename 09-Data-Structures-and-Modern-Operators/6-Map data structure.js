@@ -1,4 +1,5 @@
-'use strict';const preventFormater = 1;
+'use strict';
+const preventFormater = 1;
 
 ///////////////////////////////////////// Maps: Fundamentals;
 
