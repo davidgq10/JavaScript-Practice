@@ -1,5 +1,4 @@
-'use strict';
-const preventFormater = 1;
+'use strict';const preventFormater = 1;
 
 /* 
 Let's build a simple poll app!
@@ -62,6 +61,8 @@ buttonPoll.addEventListener('click', function () {
   Poll.registerNewAnswer();
   Poll.displayResults(Poll.answers);
 });
+
+//When
 
 /* /////////////////// JONAS ANSWER ///////////////////
 const poll = {
