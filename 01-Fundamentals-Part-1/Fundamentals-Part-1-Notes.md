@@ -67,7 +67,7 @@ NaN
 ### **<font color=orangered> Nullish coalescing operator (??) </font>** _[🌐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)_
 
 
-Este operador devolverá lo que se encuentre a la derecha si el valor de la izquierda es cualquier *falsy value*, excepto `null` y `undefined`, por ejemplo:
+Este operador devolverá lo que se encuentre a la derecha si el valor de la izquierda es `null` o `undefined`, por ejemplo:
 
 ```js
 const foo = null ?? 'default string';
@@ -77,6 +77,10 @@ console.log(foo);
 const baz = 0 ?? 42;
 console.log(baz);
 // expected output: 0
+
+const baz = 5 > 0 ?? 42;
+console.log(baz);
+// expected output: true
 ```
 Para convinarlo con otros operadores lógicos se debe anidar con paréntesis lo que esté a la izquierda, ejemplo:
 
@@ -92,3 +96,4 @@ const Cuota = "La Cuota es de:  " + (isMember ? "$2.00" : "$10.00");
 //También es muy común utilizarlo con template literals
 console.log(`El horario es: ${ isWeekDays ? '10am-10pm' : '9am-12pm'}`)
 ```
+
