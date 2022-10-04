@@ -25,7 +25,22 @@ A condinuación se muestra un ejemplo de la colocación de la script, :
 
 <img src="https://pbs.twimg.com/media/EeVw-DOXgAAMtKk.jpg" alt="Variables scope" style="height: 250px; width:300px;"/>
 
+#### **<font color=yellowgreen> Conversión y Cohersión </font>**
+La conversión de variables se da cuando a travén de código se realiza la conversión de un tipo de variable a otro, por ejemplo:
 
+```js
+let myVar = "David" 
+typeOf(myVar) // String
+Boolean(myVar) // return True
+Boolean('') // return False
+Number("30") // return number 30
+String(true)  // return 'true'
+```
+Mientras que que la coerción es la conversión automática que realiza JavaScript en funciones matemáticas y expresiones.
+
+```js
+alert( "6" / "2" + 2 ) //retunr 5
+```
 
 ### **<font color=orangered> Precedencia de operadores (Operators precedence) </font>**
 
