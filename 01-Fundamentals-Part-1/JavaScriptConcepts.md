@@ -1,0 +1,52 @@
+# JS Notes
+## JavaScript Concepts
+
+### **<font color=orangered> JS Engine </font>**
+
+<img src="img/JSEngine.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Execution Context </font>**
+
+<img src="img/JSExecutionContext.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+<img src="img/JSExecutionContextDetail.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+
+### **<font color=orangered> Scope </font>**
+
+####  **<font color=yellowgreen> Scoping </font>** 
+How our program’s variables are organized and accessed. “Where do variables
+live?” or “Where can we access a certain variable, and where not?”;
+####  **<font color=yellowgreen> Lexical scoping </font>** 
+Scoping is controlled by placement of functions and blocks in the code;
+####  **<font color=yellowgreen> Scope </font>** 
+Space or environment in which a certain variable is declared (variable
+environment in case of functions). There is global scope, function scope, and block scope;
+####  **<font color=yellowgreen> Scope of a variable </font>** 
+Region of our code where a certain variable can be accessed.
+
+### **<font color=orangered> Scope chain </font>**
+
+<img src="img/JSScopeChain.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Scope chain vs Call Stack </font>**
+
+<img src="img/JSScopeChainvsCallStack.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Hoising and Temporal Dead Zone (TDZ) </font>**
+
+<img src="img/JSHoisingAndTDZ.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+<img src="img/JSHoisingAndTDZExample.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+
+### **<font color=orangered> The `This` keyword  </font>**
+
+<img src="img/JSthisKeyWord.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Store Primtive and Objects </font>**
+
+<img src="img/JSthisKeyWord.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+<img src="img/JSStorePrimitiveAndObjectsExamples.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+#### **<font color=yellowgreen> HOW TO COPY AN OBJECT  </font>**
+To create a copy from one object we can use the `Object.assign()` method, BUT they only is going to copy the main level properties. _[Ver más](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#:~:text=The%20Object.assign()%20method%20only%20copies%20enumerable%20and%20own,copying%20or%20defining%20new%20properties.)_
