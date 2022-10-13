@@ -368,3 +368,9 @@ console.log(rest.set(2, 'Lisbon, Portugal'));
 ```
 
 Ejemplos de operaciones con `Map`: _[Ver más](/09-Data-Structures-and-Modern-Operators/6-Map%20data%20structure.js)_
+
+### **<font color=orangered> Cómo saber cuál estructura de datos se debe utilizar? </font>**  
+
+La estructura de datos que debemos seleccionar dependerá del requerimiento del manejo de datos, en general podermos definirlo así:
+
+<img src="/Notes/img/JSSelectDataStructure.png" alt="Variables scope" style="height: 300px; width:600px;"/>

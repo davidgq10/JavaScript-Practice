@@ -28,36 +28,54 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-//Number 1
-const distinctEvents = new Set([...gameEvents.values()]);
-console.log(distinctEvents);
+//1
+const events = new Set(gameEvents.values());
+console.log(events);
 
-//Number 2
+//2
 gameEvents.delete(64);
 console.log(gameEvents);
+//3
 
-//Number 3
-let average = 90;
-average /= gameEvents.size;
-console.log(`An event happened, on average, every ${average} minutes`);
-//Other way number 3
-const time = [...gameEvents.keys()].pop();
-console.log(time);
 console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
+  `An event happened, on average, every ${90 / gameEvents.size} minutes`
 );
-
-//Number 4
-
-for (const [min, event] of gameEvents) {
-  minute <= 45
-    ? console.log(`[FIRST HALF] ${min}: ${event}`)
-    : console.log(`[SECOND HALF] ${min}: ${event}`);
+//4
+for (const [minute, event] of gameEvents) {
+  console.log(
+    `${minute <= 45 ? '[FIRST HALF] ' : '[SECOND HALF] '} ${minute}: ${event} `
+  );
 }
+// //Number 1
+// const distinctEvents = new Set([...gameEvents.values()]);
+// console.log(distinctEvents);
 
-//Other way number 4
+// //Number 2
+// gameEvents.delete(64);
+// console.log(gameEvents);
 
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${min}: ${event}`);
-}
+// //Number 3
+// let average = 90;
+// average /= gameEvents.size;
+// console.log(`An event happened, on average, every ${average} minutes`);
+// //Other way number 3
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
+
+// //Number 4
+
+// for (const [min, event] of gameEvents) {
+//   minute <= 45
+//     ? console.log(`[FIRST HALF] ${min}: ${event}`)
+//     : console.log(`[SECOND HALF] ${min}: ${event}`);
+// }
+
+// //Other way number 4
+
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${min}: ${event}`);
+// }
