@@ -1,5 +1,4 @@
-'use strict';
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+'use strict';const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
@@ -16,13 +15,16 @@ const openingHours = {
 };
 
 const sumNumbers = (...numbers) => {
+  console.log(`✨`, numbers);
+  let initialValue = 0;
   const sumWithInitial = numbers.reduce(
     (previousValue, currentValue) => previousValue + currentValue,
     initialValue
   );
+  return sumWithInitial;
 };
 
-console.log('The result of the sum is: ' & sumNumbers(5, 4, 8, 9));
+console.log('🎃 The result of the sum is: ', sumNumbers(5, 4, 8, 9));
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -220,3 +222,48 @@ const rest2 = {
 
 // console.log(rest1);
 // console.log(rest2);
+
+///////////////////////////////////////
+// Optional Chaining
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// console.log(restaurant.openingHours.mon.open);
+
+// WITH optional chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`🎊 On ${day}, we open at ${open}`);
+}
+
+///////////////////////////////////////
+// Looping Objects: Object Keys, Values, and Entries
+
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(`🎎`, properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log('🎨', openStr);
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log('👔', values);
+
+// Entire object
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+// [key, value]
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
+}

@@ -84,7 +84,53 @@ NaN
 == //Equality: two equality values
 === //Equality: two equals values and data types
 >, <, >=, <=, in ...
+
+//Operadores modernos
+
+//OR assignment operator
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
+// nullish assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// AND assignment operator
+rest1.owner = rest1.owner && '<ANONYMOUS>';
+rest2.owner = rest2.owner && '<ANONYMOUS>';
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
 ```
+
+Operadores modernos (SPREAD and REST operators): _[Ver más](/09-Data-Structures-and-Modern-Operators/4-modernOperators.js)_
+
+
+#### **<font color=yellowgreen> Short Circuiting </font>**
+```js
+console.log('---- OR ----');
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('---- AND ----');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+```
+
+
 ### **<font color=orangered> Nullish coalescing operator (??) </font>** _[🌐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)_
 
 
@@ -274,3 +320,51 @@ delete myObj['Mail']
 ```
 
 Destructurando objetos: _[Ver más](/09-Data-Structures-and-Modern-Operators/2-destructuringObjects.js)_
+
+### **<font color=orangered> Set </font>**  _[🌐](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)_
+
+Set es básicamente una colección de valores únicos.
+
+Para declararlo se utiliza la siguiente sintáxis:
+
+```js
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet); // output: { 'Pasta', 'Pizza', 'Risotto' }
+
+//En los SET el orden NO importa, por lo que NO se puede utilizar como array, ejemplo: ordersSet[1] = undefined
+```
+
+`Set` tiene varios métodos, al igual que un array, como por ejemplo: `has`, `add`, `delete`.
+
+Ejemplos de operaciones con `Set`: _[Ver más](/09-Data-Structures-and-Modern-Operators/5-Set%20data%20structure.js)_
+
+### **<font color=orangered> Map </font>**  _[🌐](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)_
+
+Para declararlo se utiliza la siguiente sintáxis:
+
+```js
+//To create a new map we use the next sentense
+const rest = new Map();
+```
+Con `Map` las claves pueden ser cualquier tipo de valor
+```js
+//Then we can add new elements to the map with SET method
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+
+//When we use set method also returns the map, and we can print it.
+console.log(rest.set(2, 'Lisbon, Portugal'));
+/*Output:
+0: {"name" => "Classico Italiano"}
+1: {1 => "Firenze, Italy"}
+2: {2 => "Lisbon, Portugal"}*/
+```
+
+Ejemplos de operaciones con `Map`: _[Ver más](/09-Data-Structures-and-Modern-Operators/6-Map%20data%20structure.js)_
