@@ -15,6 +15,15 @@ const openingHours = {
   },
 };
 
+const sumNumbers = (...numbers) => {
+  const sumWithInitial = numbers.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initialValue
+  );
+};
+
+console.log('The result of the sum is: ' & sumNumbers(5, 4, 8, 9));
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -200,14 +209,14 @@ const rest2 = {
 // rest2.numGuests ||= 10;
 
 // nullish assignment operator (null or undefined)
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
 
 // AND assignment operator
 // rest1.owner = rest1.owner && '<ANONYMOUS>';
 // rest2.owner = rest2.owner && '<ANONYMOUS>';
-rest1.owner &&= '<ANONYMOUS>';
-rest2.owner &&= '<ANONYMOUS>';
+// rest1.owner &&= '<ANONYMOUS>';
+// rest2.owner &&= '<ANONYMOUS>';
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);

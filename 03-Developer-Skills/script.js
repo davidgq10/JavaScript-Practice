@@ -9,21 +9,18 @@
 // const calcAge = birthYear => 2037 - birthYear;
 // console.log(``);
 
-let Data1 = [17, 21, 23];
-let Data2 = [12, 5, -5, 0, 4];
-
-console.log(arr);
+let arr = [12, 5, -5, 0, 4];
 
 const printForcast = arr => {
-    let arrForcast = [];
-    for (let i = 0; i < arr.length; i++) {
-        arrForcast.push(' ' + arr[i] + '°C in ' + (i + 1) + ' days');
-    }
-    return arrForcast;
+  let arrForcast = [];
+  for (let i = 0; i < arr.length; i++) {
+    arrForcast.push(' ' + arr[i] + '°C in ' + (i + 1) + ' days');
+  }
+  return arrForcast;
 };
 
 console.log(
-    `The forcast tempertures for the next ${arr.length} days are: ${printForcast(
-        arr
-    )}`
+  `The forcast tempertures for the next ${arr.length} days are: ${printForcast(
+    arr
+  )}`
 );

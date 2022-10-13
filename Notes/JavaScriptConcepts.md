@@ -49,4 +49,14 @@ Region of our code where a certain variable can be accessed.
 <img src="img/JSStorePrimitiveAndObjectsExamples.png" alt="Variables scope" style="height: 350px; width:600px;"/>
 
 #### **<font color=yellowgreen> HOW TO COPY AN OBJECT  </font>**
-To create a copy from one object we can use the `Object.assign()` method, BUT they only is going to copy the main level properties. _[Ver más](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#:~:text=The%20Object.assign()%20method%20only%20copies%20enumerable%20and%20own,copying%20or%20defining%20new%20properties.)_
+To create a copy from one object we can use the `Object.assign()` method. _[Ver más](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#:~:text=The%20Object.assign()%20method%20only%20copies%20enumerable%20and%20own,copying%20or%20defining%20new%20properties.)_
+
+Other way to copy an object is using spread operator:
+```js
+const copyObject = ...myObject
+```
+BUT this methods (`Object.assign()` and Spread operator) are only going to copy the main level properties.
+
+
+### **<font color=orangered> Mutabilidad  </font>**
+Hablamos de mutabilidad en JavaScript (o en otros lenguajes de programación) como la capacidad de un elemento de cambiar su estado. Cambiando el valor de la propiedad de un objeto, o la referencia que tiene una variable, estás haciendo uso de la mutabilidad de estos elementos. _[Ver más](https://www.escuelafrontend.com/articulos/mutabilidad-de-objetos)_
