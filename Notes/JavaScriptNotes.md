@@ -374,3 +374,27 @@ Ejemplos de operaciones con `Map`: _[Ver más](/09-Data-Structures-and-Modern-Op
 La estructura de datos que debemos seleccionar dependerá del requerimiento del manejo de datos, en general podermos definirlo así:
 
 <img src="/Notes/img/JSSelectDataStructure.png" alt="Variables scope" style="height: 300px; width:600px;"/>
+
+### **<font color=orangered> Working with Strings </font>**  
+
+Los `String` funcionan en forma muy similar a los arrays, en donde cada caracter ocupa una posición. Los `String` poseen métodos muy similares a los Array como por ejemplo:
+
+```js
+const myName= 'David Garbanzo'
+console.log(myName.lenght) // output: 14
+console.log(myName.indexOf('d')) // output: 1 (Devuelve la posicisión de la primer coincidencia)
+console.log(myName.lastIndexOf('d')) // output: 5 (Devuelve la posicisión de la última coincidencia)
+```
+
+Un método muy importante es `Slice` ya que permite obtener parte de un `String`, por ejemplo:
+
+```js
+console.log(myName.slice(6)) // output: 'Garbanzo' (Devuelve el String a partir de la posición 6)
+console.log(myName.slice(2,5)) // output: 'vid' (Devuelve la cadena a partir de la posición dos a la cinco)
+console.log(myName.slice(-3)) // output: 'nzo' (Devuelve los últimos 3 caracteres de la cadena)
+console.log(myName.slice(2,-3)) // output: 'vid Garba' (Devuelve la cadena desde la posición 2 y hasta menos los tres últimos caracteres)
+```
+Es importante tener claro lo siguiente:
+  - Los espacios en blanco se reconocen como catacteres
+  - Los String son valores primitivos, sin embargo, es posible llamar métodos porque JS lo que hace en segundo plano es que cuando se llama un método convierte el string en un objeto con el mismo contenido y al final se convierte nuevamente en un String ordinario
+
