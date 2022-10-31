@@ -398,3 +398,17 @@ Es importante tener claro lo siguiente:
   - Los espacios en blanco se reconocen como catacteres
   - Los String son valores primitivos, sin embargo, es posible llamar métodos porque JS lo que hace en segundo plano es que cuando se llama un método convierte el string en un objeto con el mismo contenido y al final se convierte nuevamente en un String ordinario
 
+Otros métodos importantes:
+
+```js
+let myString = '  David Garbanzo '
+let myStringTrimed = myString.trim()
+console.log(myString.trim()) // Output: 'David Garbanzo' trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
+
+myStringTrimed.startsWith('Dav') //Output: True
+myStringTrimed.endsWith('Dav') // Output: False
+myStringTrimed.replace('David', 'Fernando') //Output: 'Fernando Garbanzo'
+
+//Estos métodos no modifican la cadena original, sino que devuelven una nueva cadena con la modificación.
+```
+
