@@ -401,6 +401,8 @@ Es importante tener claro lo siguiente:
 Otros métodos importantes:
 
 ```js
+
+//Trim
 let myString = '  David Garbanzo '
 let myStringTrimed = myString.trim()
 console.log(myString.trim()) // Output: 'David Garbanzo' trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
@@ -409,6 +411,42 @@ myStringTrimed.startsWith('Dav') //Output: True
 myStringTrimed.endsWith('Dav') // Output: False
 myStringTrimed.replace('David', 'Fernando') //Output: 'Fernando Garbanzo'
 
+
 //Estos métodos no modifican la cadena original, sino que devuelven una nueva cadena con la modificación.
 ```
+Uno de lso métodos más poderosos corresponde a Split, el cual permite dividir un `String` por medio de uno o varios caracteres, retorna un `Array` con cada uno de los valores
 
+```js
+//Split method
+console.log('David Garbanzo'.split(' ')) //Output: ['David','Garbanzo']
+console.log('456+_93888e+_ñasjdf'.split('+_')) //Output: ['456', '93888e', 'ñasjdf']
+
+//Una forma muy útil de este médoto corresponde a la asignación de valores a variables como se muestra en el siguiente ejemplo:
+const [firstName, lastName] = 'David Garbanzo'.split(' ')
+
+```
+A la inversa del método `split` podemos utilizar el método `join` en donde podemos unir cadenas y asignar un valor para la unión, por ejemplo:
+
+```js
+console.log([firstName, lastName].join(' ')) //Output: 'David Garbanzo'
+```
+Podemos utilizar el método `padStart` y `padEnd` para definir una 'máscara' para nuestro String.
+
+```js
+//Obteniendo el formato a mostrar de una tarjeta de crédito:
+const maskCreditCard= (number)=>{
+    const str = String(number)
+    const last = str.slice(-4)
+    return last.padStart(str.length, "*")
+}
+
+console.log(maskCreditCard(345678987656)) //Output: ********7656
+console.log(maskCreditCard(298374)) //Output: **8374
+```
+Método `repeat`
+
+```js
+console.log('David_'.repeat(5)) //Output: David_David_David_David_David_
+```
+
+ 
