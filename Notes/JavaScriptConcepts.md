@@ -60,3 +60,6 @@ BUT this methods (`Object.assign()` and Spread operator) are only going to copy 
 
 ### **<font color=orangered> Mutabilidad  </font>**
 Hablamos de mutabilidad en JavaScript (o en otros lenguajes de programación) como la capacidad de un elemento de cambiar su estado. Cambiando el valor de la propiedad de un objeto, o la referencia que tiene una variable, estás haciendo uso de la mutabilidad de estos elementos. _[Ver más](https://www.escuelafrontend.com/articulos/mutabilidad-de-objetos)_
+
+### **<font color=orangered> First Class vs Higher Order Functions  </font>**
+<img src="img/JSFunctionsFirstClass-HigherOrder.png" alt="Variables scope" style="height: 350px; width:600px;"/>

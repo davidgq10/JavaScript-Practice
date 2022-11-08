@@ -449,4 +449,39 @@ Método `repeat`
 console.log('David_'.repeat(5)) //Output: David_David_David_David_David_
 ```
 
- 
+### **<font color=orangered> Working with functions </font>**  _[🌐](https://es.javascript.info/object-basics)_
+
+#### **<font color=yellowgreen> Default parameters </font>**
+
+Podemos definir los parámetros por defecto en una función de la siguiente forma, en los parámetros de la función se iguala al valor por defecto en caso de no recibir ningún argumento, como se muestra a continuación:
+
+```js
+function printAgeTest (age=25, name="David"){
+console.log(`The age is ${age} and the name is ${name}`)
+}
+
+printAgeTest (15, "Andrés") //Output: The age is 15 and the name is Andrés
+printAgeTest (15) //Output: The age is 15 and the name is David
+printAgeTest (undefined, "Andrés") //Output: The age is 25 and the name is Andrés
+```
+
+⚠ Es importante tener en cuenta que cuando pasamos un argumento a una función siempre recibirá un valor (en JS no se puede pasar referencias, inclusive cuando pasamos un objeto pasamos el valor relacionado al espacio de memoria en donde se almacena el objeto).
+
+Es por esto también que en JS tiene el siguiente comportamiento:
+
+
+```js
+let myVar = "David";
+const myObj = {name:'David', age:34}
+
+function changeData (myVar, myObj){
+  myVar = 'Pablo'
+  myObj.age = 40
+}
+
+changeData(myVar,myObj)
+console.log(myVar,myObj) //Output: David {name: 'David', age: 40}
+```
+Lo que ocurre en el ejemplo anterior es que cuanto llamamos a la función *changeData* el parámetro *myVar* recibe la copia de la variable *myVar* declarada anteriormente pero no modifica la varible original.
+
+En cambio el parámetro *myObj* recibe el valor de la ubicación del objecto *myObj* y la función modifica directamente el objecto.
