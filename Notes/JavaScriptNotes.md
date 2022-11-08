@@ -485,3 +485,33 @@ console.log(myVar,myObj) //Output: David {name: 'David', age: 40}
 Lo que ocurre en el ejemplo anterior es que cuanto llamamos a la función *changeData* el parámetro *myVar* recibe la copia de la variable *myVar* declarada anteriormente pero no modifica la varible original.
 
 En cambio el parámetro *myObj* recibe el valor de la ubicación del objecto *myObj* y la función modifica directamente el objecto.
+
+#### **<font color=yellowgreen> The `call` method </font>**
+
+Podemos utilizar el métido `call` cuando requerimos utilizar una función que se encuentra alojada en el objecto A pero llamarla utilizando la información del objecto B, como se muestra en el siguiente ejemplo:
+
+```js
+
+//Objecto dgq con el método *drink*
+const dgq = {
+    name: 'David',
+    age:34,
+    drink(typeofBeer,quantity){
+    if (quantity>=5) {console.log(`${this.name} have been drinking a lot of beers:  ${quantity} ${typeofBeer}, please ${this.name} don't drink more`)} 
+    else {console.log(`Another ${typeofBeer} please!!!`)}}
+    }
+
+//Objecto Juan SIN con el método *drink*
+const Juan = {
+    name: 'Juan',
+    age:38}
+    
+    
+//Llamada normal a la función dgq.drink
+dgq.drink('Pilsen', 7) //Output: David have been drinking a lot of beers: 7 Pilsen, please David don't drink more!!!
+dgq.drink('Leffe brown',3) //Output: Another Leffe brown please!!!
+
+//Llamada al método CALL
+dgq.drink.call(Juan, 'Imperial',7) //Output: Juan have been drinking a lot of beers:  7 Imperial, please David don't drink more
+
+```
