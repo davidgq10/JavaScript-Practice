@@ -515,3 +515,22 @@ dgq.drink('Leffe brown',3) //Output: Another Leffe brown please!!!
 dgq.drink.call(Juan, 'Imperial',7) //Output: Juan have been drinking a lot of beers:  7 Imperial, please David don't drink more
 
 ```
+
+#### **<font color=yellowgreen> The `apply` method </font>**
+
+Funciona igual que the `call` method pero con la diferencia que en lugar de recibir parámetros individuales, recibe un array. Siguiendo el ejemplo anterior:
+
+```js
+dgq.drink.apply(Juan, ['Imperial',7]) //Output: Juan have been drinking a lot of beers:  7 Imperial, please David don't drink more
+```
+
+Actualmente no es tan común utilizar el método apply ya que se puede utilizar una estructura tipo `dqg.dring(Juan, ...DrinkInfo)`
+
+#### **<font color=yellowgreen> The `bind` method </font>**
+
+El método `bind` permite enlazar la propiedad para no tener que estarla llamando constantemente. Por ejemplo:
+
+```js
+Juan.drunk = David.drink.bind(Juan)
+Juan.drunk("Imperial",6) // Output: Juan ha tomado 6 cervezas tipo Imperial
+```
