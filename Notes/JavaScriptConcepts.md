@@ -63,3 +63,6 @@ Hablamos de mutabilidad en JavaScript (o en otros lenguajes de programación) co
 
 ### **<font color=orangered> First Class vs Higher Order Functions  </font>**
 <img src="img/JSFunctionsFirstClass-HigherOrder.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Closures </font>**
+<img src="img/JSClosures.jpg" alt="Variables scope" style="height: 350px; width:600px;"/>
