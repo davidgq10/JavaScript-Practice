@@ -456,7 +456,7 @@ console.log('David_'.repeat(5)) //Output: David_David_David_David_David_
 Podemos definir los parámetros por defecto en una función de la siguiente forma, en los parámetros de la función se iguala al valor por defecto en caso de no recibir ningún argumento, como se muestra a continuación:
 
 ```js
-function printAgeTest (age=25, name="David"){
+function printAgeTest (age=25,   name="David"){
 console.log(`The age is ${age} and the name is ${name}`)
 }
 
