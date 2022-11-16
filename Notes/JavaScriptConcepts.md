@@ -42,9 +42,9 @@ Region of our code where a certain variable can be accessed.
 
 <img src="img/JSthisKeyWord.png" alt="Variables scope" style="height: 350px; width:600px;"/>
 
-### **<font color=orangered> Store Primtive and Objects </font>**
+### **<font color=orangered> Store Primitive and Objects </font>**
 
-<img src="img/JSthisKeyWord.png" alt="Variables scope" style="height: 350px; width:600px;"/>
+
 
 <img src="img/JSStorePrimitiveAndObjectsExamples.png" alt="Variables scope" style="height: 350px; width:600px;"/>
 
@@ -65,4 +65,20 @@ Hablamos de mutabilidad en JavaScript (o en otros lenguajes de programación) co
 <img src="img/JSFunctionsFirstClass-HigherOrder.png" alt="Variables scope" style="height: 350px; width:600px;"/>
 
 ### **<font color=orangered> Closures </font>**
+
+En relación a los closures es importante tener en cuenta que la función recordará todas las variales del entorno o scope en donde fue declarada, incluso aunque el entorno de ejecusion ya haya desaparecido del Call Stack.
+
 <img src="img/JSClosures.jpg" alt="Variables scope" style="height: 350px; width:600px;"/>
+
+### **<font color=orangered> Immediately Invoked Function Expression (IIFE) </font>**
+
+Is a JavaScript function that runs as soon as it is defined
+
+```JS
+let result = (function () {
+    const name = "Barry"; 
+    return name; 
+})(); 
+// Immediately creates the output: 
+result; // "Barry"
+```
