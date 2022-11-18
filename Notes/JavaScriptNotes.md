@@ -283,7 +283,10 @@ Métodos de un array (from MDN): _[Ver más](/Notes/Arrays/ArraysMethods.md)_
 
 Destructurando Arrays: _[Ver más](/09-Data-Structures-and-Modern-Operators/1-destructuringArrays.js)_
 
-
+Existen 3 métodos primordiales para trabajar con Arrays:
+1.  Map (Iteración)
+2.  Filter (Filtrado)
+3.  Reduce (Suma de valores)
 
 ### **<font color=orangered> Objetos </font>**  _[🌐](https://es.javascript.info/object-basics)_
 
