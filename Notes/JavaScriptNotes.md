@@ -537,3 +537,9 @@ El método `bind` permite enlazar la propiedad para no tener que estarla llamand
 Juan.drunk = David.drink.bind(Juan)
 Juan.drunk("Imperial",6) // Output: Juan ha tomado 6 cervezas tipo Imperial
 ```
+
+#### **<font color=yellowgreen> Resume `Map, Filter, Reduce` Methods </font>**
+
+Podemos resumir el funcionamiento de estos métodos con la siguiente imegen:
+
+<img src="/Notes/img/JSMapFilterReduceMethods.png" alt="Map, Filter and Reduce methods" style="height: 300px; width:600px;"/>
