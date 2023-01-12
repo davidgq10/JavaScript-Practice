@@ -82,3 +82,21 @@ let result = (function () {
 // Immediately creates the output: 
 result; // "Barry"
 ```
+### **<font color=orangered> Chaining Methods  </font>**
+
+Los métodos de encadenamiento es cuando podemos llamar un método después de otro en forma consecutiva, por ejemplo:
+
+```JS
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov);
+```
+Es importante tener en cuenta que lo que devuelta el método predecesor debe ser del tipo requerido por el siguiente método a llamar. Por ejemplo:
+
+- No se puede llamar a `reduce` que devuelve un solo valor y luego efectuar un `map` que requiere un array.
+
+***Importante
+- No se recomienda abusar del chaining
+- No se recomienda utilizar chaining con métodos que mutan la matriz
+- Con grandes datos podría afectar rendimiento, por eso es importante siempre buscar optimización del código
