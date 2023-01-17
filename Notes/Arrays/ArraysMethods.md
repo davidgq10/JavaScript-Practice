@@ -1,4 +1,10 @@
 
+#### **<font color=yellowgreen> Which array method to use </font>**
+
+
+
+<img src="img/../../img/JSWhichArrayMethodToUse.png" alt="Variables scope" style="height: 500px; width:850px;"/>
+
 | Método         | Descripción                                                                                                                                                                                                                                                                                             | MDN Link                                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | at             | El método `at()` recibe un valor numérico entero y devuelve el elemento en esa posición, permitiendo valores positivos y negativos. Los valores negativos contarán desde el último elemento del array.                                                                                                  | _[Ver más](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/at )_              |
