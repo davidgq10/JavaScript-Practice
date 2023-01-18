@@ -1,4 +1,5 @@
-'use-strict';const preventFormater = '';
+'use-strict';
+const preventFormater = '';
 
 ///////////////////////////////////////
 // Coding Challenge #4
@@ -42,40 +43,38 @@ const dogs = [
 dogs.forEach(dog => {
   dog.recFood = dog.weight ** 0.75 * 28;
 });
+console.log(dogs);
 
 const SarahDog = dogs.find(dog => dog.owners.some(owner => owner === 'Sarah'));
 //console.log(SarahDog);
+//3
 
 //2
+function dogFoodMetrics(dog) {
+  const ownersEatTooLittle = [];
+  const ownersEatTooMuch = [];
+  const curFood = Math.floor(dog.curFood);
+  const recFood = Math.floor(dog.recFood);
+  const maxRecFood = Math.floor(recFood * 1.1);
+  const minRecFood = Math.floor(recFood * 0.9);
 
-const [maxRecFood, minRecFood, curFood] = [
-  (SarahDog.recFood *= 1.1),
-  (SarahDog.recFood *= 0.9),
-  SarahDog.curFood,
-];
-//console.log(`Max: ${maxRecFood}, Min: ${minRecFood}, Cur: ${curFood}`);
+  if (minRecFood > curFood) {
+    ownersEatTooLittle.push(...dog.owners);
+    return console.log("it's eating too little");
+  }
+  if (maxRecFood < curFood) {
+    ownersEatTooMuch.push(...dog.owners);
+    return console.log("it's eating too much");
+  }
+  if (minRecFood < curFood && curFood < maxRecFood)
+    return console.log("it's eating well");
+}
 
-if (minRecFood > curFood) console.log("it's eating too little");
-if (maxRecFood < curFood) console.log("it's eating too much");
-if (minRecFood < curFood && curFood < maxRecFood)
-  console.log("it's eating well");
+dogFoodMetrics(SarahDog);
 
-//3
-const ownersEatTooLittle = [];
-const ownersEatTooMuch = [];
-
-dogs.forEach(dog => {
-  const [maxRecFood, minRecFood, curFood] = [
-    (dog.recFood *= 1.1),
-    (dog.recFood *= 0.9),
-    dog.curFood,
-  ];
-
-  if (minRecFood > curFood)
-    ownersEatTooLittle.push(dog.owners.forEach(owner => owner));
-  if (maxRecFood < curFood)
-    ownersEatTooMuch.push(dog.owners.forEach(owner => owner));
-  console.log(ownersEatTooLittle, ownersEatTooMuch);
-});
-
-console.log(ownersEatTooLittle, ownersEatTooMuch);
+console.log(
+  'ownersEatTooLittle',
+  ownersEatTooLittle,
+  'ownersEatTooMuch',
+  ownersEatTooMuch
+);
