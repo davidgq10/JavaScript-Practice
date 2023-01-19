@@ -1,5 +1,4 @@
-'use-strict';
-const preventFormater = '';
+'use-strict';const preventFormater = '';
 
 ///////////////////////////////////////
 // Coding Challenge #4
@@ -41,40 +40,63 @@ const dogs = [
 
 //1
 dogs.forEach(dog => {
-  dog.recFood = dog.weight ** 0.75 * 28;
+  dog.recFood = Math.floor(dog.weight ** 0.75 * 28);
 });
-console.log(dogs);
-
-const SarahDog = dogs.find(dog => dog.owners.some(owner => owner === 'Sarah'));
-//console.log(SarahDog);
-//3
+//console.log(dogs);
 
 //2
-function dogFoodMetrics(dog) {
-  const ownersEatTooLittle = [];
-  const ownersEatTooMuch = [];
-  const curFood = Math.floor(dog.curFood);
-  const recFood = Math.floor(dog.recFood);
-  const maxRecFood = Math.floor(recFood * 1.1);
-  const minRecFood = Math.floor(recFood * 0.9);
+const SarahDog = dogs.find(dog => dog.owners.some(owner => owner === 'Sarah'));
+//console.log(SarahDog);
 
-  if (minRecFood > curFood) {
-    ownersEatTooLittle.push(...dog.owners);
-    return console.log("it's eating too little");
-  }
-  if (maxRecFood < curFood) {
-    ownersEatTooMuch.push(...dog.owners);
-    return console.log("it's eating too much");
-  }
-  if (minRecFood < curFood && curFood < maxRecFood)
-    return console.log("it's eating well");
+const calcDogConsumption = dog => {
+  const curFood = dog.curFood;
+  const recFood = dog.recFood;
+  const maxRecFood = recFood * 1.1;
+  const minRecFood = recFood * 0.9;
+
+  if (minRecFood > curFood) return 'little';
+  if (maxRecFood < curFood) return 'too much';
+  if (minRecFood < curFood && curFood < maxRecFood) return 'normal';
+};
+
+const printDogConsumption = dog => {
+  console.log(
+    `${dog.owners.join(', ')} dog it's eating ${calcDogConsumption(dog)}`
+  );
+};
+
+printDogConsumption(SarahDog);
+
+const ownersEatTooLittle = [];
+const ownersEatTooMuch = [];
+const dogEatignWell = [];
+
+function updateOwnersEatTooMuchTooLittle(dogs) {
+  dogs.forEach(dog => {
+    const dogConsumption = calcDogConsumption(dog);
+    if (dogConsumption === 'little') ownersEatTooLittle.push(dog.owners);
+    if (dogConsumption === 'too much') ownersEatTooMuch.push(dog.owners);
+    if (dogConsumption === 'normal') dogEatignWell.push(dog);
+  });
 }
 
-dogFoodMetrics(SarahDog);
+const stringOwnersEatTooMuchTooLittleOrNormal = (dogs, fn) => {
+  fn(dogs);
+  return `"${ownersEatTooMuch
+    .flat()
+    .join(' and ')}'s dogs eat too much!" and "${ownersEatTooLittle
+    .flat()
+    .join(' and ')} dogs eat too little!"`;
+};
 
 console.log(
-  'ownersEatTooLittle',
-  ownersEatTooLittle,
-  'ownersEatTooMuch',
-  ownersEatTooMuch
+  stringOwnersEatTooMuchTooLittleOrNormal(dogs, updateOwnersEatTooMuchTooLittle)
 );
+
+console.log(`${dogEatignWell.length === 0}`);
+console.log(
+  dogEatignWell.filter(dog => dog.curFood === dog.recFood).length !== 0
+);
+
+const sortDogs = dogs.slice().sort((a, b) => a.recFood - b.recFood);
+console.log(sortDogs);
