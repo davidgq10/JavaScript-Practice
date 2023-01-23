@@ -543,3 +543,18 @@ Juan.drunk("Imperial",6) // Output: Juan ha tomado 6 cervezas tipo Imperial
 Podemos resumir el funcionamiento de estos métodos con la siguiente imegen:
 
 <img src="/Notes/img/JSMapFilterReduceMethods.png" alt="Map, Filter and Reduce methods" style="height: 300px; width:600px;"/>
+
+### **<font color=orangered> Declaracion de funciones </font>** 
+
+#### **<font color=yellowgreen> Numbers </font>**
+
+En JavaScript todos los números se representan internamente como un tipo `float`. Es importante tener en cuenta que JavaScript intenta representar como base 10 (de cero a nueve), sin embargo, funciona como binario (de 0 a 2); esto ocasiona algunos inconvenientes, como por ejemplo:
+
+```js
+console.log((0.1+0.2) === 0.3) //false
+console.log(0.1 + 0.2) //0.30000000000000004
+console.log(10/3) //0.333333333335
+console.log((3/10)*100) //30 
+
+/// Es importante tener claro que no podemos utilizar JS para cálculos que requieran extrema presición
+```
