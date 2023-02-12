@@ -5,12 +5,16 @@ const countriesContainer = document.querySelector('.countries');
 
 ///////////////////////////////////////
 
+/// GET A NEW COUNTRY INFORMATION AND SHOW CARD
 const getCountryData = function (country) {
+
+  ///REQUEST
   const req = new XMLHttpRequest();
   req.addEventListener('load', reqListener);
   req.open('GET', `https://restcountries.com/v2/name/${country}`);
   req.send();
 
+  /// ON LOAD FUNCTION
   function reqListener() {
     const [data] = JSON.parse(this.responseText);
     console.log(data);
@@ -37,6 +41,8 @@ const getCountryData = function (country) {
   }
 };
 
+
+///////////////////
 getCountryData('peru');
 getCountryData('costa rica');
 getCountryData('japan');
