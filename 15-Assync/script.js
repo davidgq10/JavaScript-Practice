@@ -39,12 +39,25 @@ const getJSON = function (url, errorMsg = 'Something went wrong') {
 ///////////////////////////////////////
 // Our First AJAX Call: XMLHttpRequest
 
+/// GET A NEW COUNTRY INFORMATION AND SHOW CARD
 const getCountryData = function (country) {
+<<<<<<< HEAD
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
   request.send();
 
   request.addEventListener('load', function () {
+=======
+
+  ///REQUEST
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', reqListener);
+  req.open('GET', `https://restcountries.com/v2/name/${country}`);
+  req.send();
+
+  /// ON LOAD FUNCTION
+  function reqListener() {
+>>>>>>> 0a77abd4dea8f7fffe6442fff3a8c0db41340b8b
     const [data] = JSON.parse(this.responseText);
     console.log(data);
 
@@ -547,6 +560,7 @@ const whereAmI = async function () {
   }
 };
 
+<<<<<<< HEAD
 console.log('1: Will get location');
 // const city = whereAmI();
 // console.log(city);
@@ -747,3 +761,13 @@ const loadAll = async function (imgArr) {
 };
 loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 */
+=======
+
+///////////////////
+getCountryData('peru');
+getCountryData('costa rica');
+getCountryData('japan');
+getCountryData('china');
+getCountryData('russia');
+getCountryData('usa');
+>>>>>>> 0a77abd4dea8f7fffe6442fff3a8c0db41340b8b
