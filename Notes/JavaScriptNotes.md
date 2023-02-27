@@ -322,6 +322,16 @@ delete myObj.Mail //OR
 delete myObj['Mail']
 ```
 
+#### **<font color=yellowgreen> New `structureClone` API  </font>**
+
+Se pueden copiar objectos (deep clone) con la nueva API `estructre`
+
+```js
+const myJson = {name: 'David',dogs: [{name:'Zeus',age:2},{name:'Jack':age:3}]}
+
+//New method to copy structureClone()
+const myJsonCopy = structureClone(myJson)
+```
 Destructurando objetos: _[Ver más](/09-Data-Structures-and-Modern-Operators/2-destructuringObjects.js)_
 
 ### **<font color=orangered> Set </font>**  _[🌐](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)_
@@ -558,3 +568,7 @@ console.log((3/10)*100) //30
 
 /// Es importante tener claro que no podemos utilizar JS para cálculos que requieran extrema presición
 ```
+
+
+### **<font color=orangered>New await use on ES2022</font>
+A partir de ES2022 podemos utilizar el await en el nivel superior, siempre y cuando esté dentro de in module (En el html se importa la script con type="module")

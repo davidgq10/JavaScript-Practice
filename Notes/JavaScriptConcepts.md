@@ -57,6 +57,16 @@ const copyObject = ...myObject
 ```
 BUT this methods (`Object.assign()` and Spread operator) are only going to copy the main level properties.
 
+#### **<font color=yellowgreen> New `structureClone` API </font>**
+
+Se pueden copiar objectos (deep clone) con la nueva propiedad `estructre`
+
+```js
+const myJson = {name: 'David',dogs: [{name:'Zeus',age:2},{name:'Jack':age:3}]}
+
+//New method to copy structureClone()
+const myJsonCopy = structureClone(myJson)
+```
 
 ### **<font color=orangered> Mutabilidad  </font>**
 Hablamos de mutabilidad en JavaScript (o en otros lenguajes de programación) como la capacidad de un elemento de cambiar su estado. Cambiando el valor de la propiedad de un objeto, o la referencia que tiene una variable, estás haciendo uso de la mutabilidad de estos elementos. _[Ver más](https://www.escuelafrontend.com/articulos/mutabilidad-de-objetos)_
